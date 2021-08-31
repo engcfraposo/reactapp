@@ -13,7 +13,8 @@ function App() {
         setUsers(response.data)
       }
     )
-  })
+  // eslint-disable-next-line react-hooks/exhaustive-deps
+  },[])
   return (
     <div className="App">
       <header className="App-header">
