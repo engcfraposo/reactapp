@@ -1,5 +1,6 @@
 import './App.css';
-import axios from 'axios'
+import axios from 'axios';
+import Logo from './logo.svg'
 import { useEffect, useState } from 'react';
 
 function App() {
@@ -18,7 +19,11 @@ function App() {
   return (
     <div className="App">
       <header className="App-header">
-       {users.map(user => <p key={user.id}>{user.nome}</p>)}
+      {
+        users
+        ?users.map(user => <p key={user.id}>{user.nome}</p>)
+        :<img class="App-logo"src={Logo} alt="loading" />
+      }
       </header>
     </div>
   );
